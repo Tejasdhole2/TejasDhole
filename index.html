@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tejas Dhole | Full-stack Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Tejas Dhole</div>
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#" class="btn-cv">Download CV</a>
+  </nav>
+
+  <header id="hero" class="hero">
+    <div class="container hero-content">
+      <div class="text">
+        <h1>Hi, I’m <span>Tejas Dhole</span></h1>
+        <p>I build modern, scalable apps using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.</p>
+        <span id="typewriter"></span>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+      <div class="photo">
+        <div class="photo-card">
+          <img src="TejasDhole5.png" alt="Tejas Dhole" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="services container" id="services">
+    <h2>What I Do</h2>
+    <p class="section-subtitle">Turning ideas into real-world digital solutions</p>
+    <div class="services-grid">
+      <div class="service-card"><i class="fas fa-laptop-code"></i><h3>Frontend Development</h3><p>Modern UI with HTML, CSS, JS, React</p></div>
+      <div class="service-card"><i class="fas fa-server"></i><h3>Backend Development</h3><p>Node.js, Express.js & secure APIs</p></div>
+      <div class="service-card"><i class="fas fa-plug"></i><h3>API Integration</h3><p>Third-party service integrations</p></div>
+      <div class="service-card"><i class="fas fa-paint-brush"></i><h3>UI/UX Design</h3><p>Figma-to-code, smooth experience</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="about container">
+    <h2>About Me</h2>
+    <p>I’m a web developer passionate about building responsive full-stack apps. I hold a CSE diploma and currently pursuing my IT Bachelor’s degree. My skills include React, Express, MongoDB, and REST APIs.</p>
+    <div class="skills-icons">
+      <div><i class="fab fa-react"></i> React / JS</div>
+      <div><i class="fas fa-tools"></i> Node.js / Express</div>
+      <div><i class="fas fa-database"></i> MongoDB / SQL</div>
+      <div><i class="fas fa-mobile-alt"></i> Responsive Design</div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects container">
+    <h2>My Work</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="project1.png" alt="E-Commerce Platform" />
+        <h3>E-Commerce Platform</h3>
+        <p>Shopping experience with cart, payments, admin dashboard.</p>
+      </div>
+      <div class="project-card">
+        <img src="project2.png" alt="Task Manager" />
+        <h3>Task Manager</h3>
+        <p>Plan your day with CRUD, authentication, and mobile UI.</p>
+      </div>
+      <div class="project-card">
+        <img src="project3.png" alt="Chat App" />
+        <h3>Chat App</h3>
+        <p>Realtime communication using WebSocket & Node.js.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact container">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 <span>Tejas Dhole</span>. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
