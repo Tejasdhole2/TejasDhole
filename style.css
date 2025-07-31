@@ -148,6 +148,31 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+  }
+  .hero-content {
+    padding: 40px;
+  }
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .hero p {
+    font-size: 1.4rem;
+  }
+  .about, .services, .projects, .contact {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-buttons a {
+    width: 100%;
+    display: block;
+  }
+}
 
 /* === SERVICES === */
 .services {
