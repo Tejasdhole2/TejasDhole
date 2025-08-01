@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tejas Dhole | Full-stack Developer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Tejas Dhole | Full-Stack Developer</title>
+
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p6Gt4b38kd78n/7PQzX+a7Z7HXp7BI+Kq5KZMmkCQ+kfJsuLtvxl2ypEk59UlHjwY5VjddM8M1VkqhsoZueRLg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">Tejas Dhole</div>
-    <div class="menu-toggle" id="mobile-menu">
+    <div class="menu-toggle" id="mobile-menu" aria-label="Toggle menu" role="button" tabindex="0">
       <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links">
@@ -21,82 +31,143 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#" class="btn-cv">Download CV</a>
+    <a href="#" class="btn-cv" download="TejasDhole_CV.pdf" aria-label="Download CV">Download CV</a>
   </nav>
 
-  <header id="hero" class="hero">
-    <div class="container hero-content">
-      <div class="text">
-        <h1>Hi, I’m <span>Tejas Dhole</span></h1>
-        <p>I build modern, scalable apps using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.</p>
-        <span id="typewriter"></span>
-        <a href="#projects" class="btn">View My Work</a>
+  <!-- Hero Section -->
+<header id="hero" class="hero section" role="banner">
+  <div class="container hero-content">
+    <!-- existing content here -->
+    <div class="text">
+      <h1>Hi, I’m <span>Tejas Nandkumar Dhole</span></h1>
+      <h2 class="subheading">Shaping the future of technology—crafting innovative apps, intelligent websites, and digital experiences that inspire.</h2>
+      <p>
+       Transforming ideas into powerful digital products.
+      </p>
+      <span id="typewriter" aria-live="polite" aria-atomic="true"></span>
+      <a href="#projects" class="btn" aria-label="View my work">View My Work</a>
+    </div>
+    <div class="photo" role="img" aria-label="Portrait of Tejas Dhole">
+      <div class="photo-card">
+        <img src="TejasDhole5.png" alt="Tejas Dhole" />
       </div>
-      <div class="photo">
-        <div class="photo-card">
-          <img src="TejasDhole5.png" alt="Tejas Dhole" />
+    </div>
+  </div>
+
+ 
+</header>
+
+ <!-- Section divider line -->
+  <div class="section-divider"></div>
+  <!-- Services Section -->
+  <section id="services" class="services section" role="region" aria-labelledby="services-title">
+    <div class="container">
+      <h2 id="services-title" class="section-title">What I Do</h2>
+      <p class="section-subtitle">Turning ideas into real-world digital solutions</p>
+      <div class="services-grid">
+        <div class="service-card" tabindex="0">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Frontend Dev</h3>
+          <p>HTML, CSS, JS, React</p>
+        </div>
+        <div class="service-card" tabindex="0">
+          <i class="fas fa-server"></i>
+          <h3>Backend Dev</h3>
+          <p>Node.js, Express APIs</p>
+        </div>
+        <div class="service-card" tabindex="0">
+          <i class="fas fa-plug"></i>
+          <h3>API Integration</h3>
+          <p>RESTful &amp; 3rd-Party APIs</p>
+        </div>
+        <div class="service-card" tabindex="0">
+          <i class="fas fa-paint-brush"></i>
+          <h3>UI/UX Design</h3>
+          <p>From Figma to Code</p>
         </div>
       </div>
     </div>
-  </header>
-
-  <section class="services container" id="services">
-    <h2>What I Do</h2>
-    <p class="section-subtitle">Turning ideas into real-world digital solutions</p>
-    <div class="services-grid">
-      <div class="service-card"><i class="fas fa-laptop-code"></i><h3>Frontend Development</h3><p>Modern UI with HTML, CSS, JS, React</p></div>
-      <div class="service-card"><i class="fas fa-server"></i><h3>Backend Development</h3><p>Node.js, Express.js & secure APIs</p></div>
-      <div class="service-card"><i class="fas fa-plug"></i><h3>API Integration</h3><p>Third-party service integrations</p></div>
-      <div class="service-card"><i class="fas fa-paint-brush"></i><h3>UI/UX Design</h3><p>Figma-to-code, smooth experience</p></div>
-    </div>
   </section>
 
-  <section id="about" class="about container">
-    <h2>About Me</h2>
-    <p>I’m a web developer passionate about building responsive full-stack apps. I hold a CSE diploma and currently pursuing my IT Bachelor’s degree. My skills include React, Express, MongoDB, and REST APIs.</p>
-    <div class="skills-icons">
-      <div><i class="fab fa-react"></i> React / JS</div>
-      <div><i class="fas fa-tools"></i> Node.js / Express</div>
-      <div><i class="fas fa-database"></i> MongoDB / SQL</div>
-      <div><i class="fas fa-mobile-alt"></i> Responsive Design</div>
-    </div>
-  </section>
-
-  <section id="projects" class="projects container">
-    <h2>My Work</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="project1.png" alt="E-Commerce Platform" />
-        <h3>E-Commerce Platform</h3>
-        <p>Shopping experience with cart, payments, admin dashboard.</p>
-      </div>
-      <div class="project-card">
-        <img src="project2.png" alt="Task Manager" />
-        <h3>Task Manager</h3>
-        <p>Plan your day with CRUD, authentication, and mobile UI.</p>
-      </div>
-      <div class="project-card">
-        <img src="project3.png" alt="Chat App" />
-        <h3>Chat App</h3>
-        <p>Realtime communication using WebSocket & Node.js.</p>
+  <!-- About Section -->
+  <section id="about" class="about section" role="region" aria-labelledby="about-title">
+    <div class="container">
+      <h2 id="about-title" class="section-title">About Me</h2>
+      <p>
+        I’m a web developer passionate about building responsive full-stack apps. I hold a CSE diploma and
+        currently pursuing my IT Bachelor’s degree. My skills include React, Express, MongoDB, and REST APIs.
+      </p>
+      <div class="skills-icons" aria-label="Technical skills">
+        <div><i class="fab fa-react" aria-hidden="true"></i> React</div>
+        <div><i class="fas fa-tools" aria-hidden="true"></i> Node/Express</div>
+        <div><i class="fas fa-database" aria-hidden="true"></i> MongoDB</div>
+        <div><i class="fas fa-mobile-alt" aria-hidden="true"></i> Responsive Design</div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact container">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <!-- Projects Section -->
+  <section id="projects" class="projects section" role="region" aria-labelledby="projects-title">
+    <div class="container">
+      <h2 id="projects-title" class="section-title">Projects</h2>
+      <div class="container_proj">
+        <article class="card" style="--clr: #4c4cff" tabindex="0">
+          <div class="img-box">
+            <img src="chatbot.png" alt="Chat Bot project screenshot" />
+          </div>
+          <div class="content">
+            <h2>Chat Bot</h2>
+            <p>An interactive chatbot built using JavaScript and AI APIs to handle real-time user queries.</p>
+            <a href="https://tejasdhole2.github.io/Chatbot/" target="_blank" rel="noopener noreferrer" aria-label="Visit Chat Bot site">Visit site</a>
+          </div>
+        </article>
+
+        <article class="card" style="--clr: #ff6f61" tabindex="0">
+          <div class="img-box">
+            <img src="GenoCare.png" alt="GenoCare project screenshot" />
+          </div>
+          <div class="content">
+            <h2>GenoCare</h2>
+            <p>
+              Developed in a team using HTML, CSS, JavaScript, and PHP/MySQL. Features include dynamic Medicals search near you, secure appointment booking, and real-time contact support.
+            </p>
+            <a href="#" aria-label="Visit GenoCare site">Visit Site</a>
+          </div>
+        </article>
+
+        <article class="card" style="--clr: #1abc9c" tabindex="0">
+          <div class="img-box">
+            <img src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=872&q=80" alt="Ocean web project screenshot" />
+          </div>
+          <div class="content">
+            <h2>Ocean</h2>
+            <p>Building fluid interfaces and backend services that scale as your users grow.</p>
+            <a href="#" aria-label="Read more about Ocean project">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <footer class="footer">
+  <!-- Contact Section -->
+  <section id="contact" class="contact section" role="region" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 id="contact-title" class="section-title">Contact Me</h2>
+      <form action="#" method="POST" aria-label="Contact form">
+        <input type="text" name="name" placeholder="Your Name" required aria-required="true" />
+        <input type="email" name="email" placeholder="Your Email" required aria-required="true" />
+        <textarea name="message" rows="4" placeholder="Your Message" required aria-required="true"></textarea>
+        <button type="submit" aria-label="Send message">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
     <p>&copy; 2025 <span>Tejas Dhole</span>. All rights reserved.</p>
   </footer>
 
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
