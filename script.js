@@ -1,34 +1,54 @@
+// === Typewriter Effect ===
 const typeTarget = document.getElementById("typewriter");
 const words = ["React Enthusiast", "Full-Stack Developer", "Open Source Contributor"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
+let typingTimeout;
 
 function typeEffect() {
   const currentWord = words[wordIndex];
   const typedText = currentWord.substring(0, charIndex);
-  typeTarget.textContent = typedText;
+  // Update text with blinking cursor span
+  typeTarget.innerHTML = typedText + '<span class="cursor">|</span>';
 
   if (!isDeleting && charIndex < currentWord.length) {
     charIndex++;
-    setTimeout(typeEffect, 100);
+    typingTimeout = setTimeout(typeEffect, 100);
   } else if (isDeleting && charIndex > 0) {
     charIndex--;
-    setTimeout(typeEffect, 50);
+    typingTimeout = setTimeout(typeEffect, 60);
   } else {
+    // Switch between typing and deleting after the word is fully typed/deleted
     isDeleting = !isDeleting;
     if (!isDeleting) {
+      // Move to the next word after deletion cycle completes
       wordIndex = (wordIndex + 1) % words.length;
     }
-    setTimeout(typeEffect, 1000);
+    typingTimeout = setTimeout(typeEffect, 1000);
   }
 }
-typeEffect();
 
-// Mobile Menu Toggle
+document.addEventListener("DOMContentLoaded", () => {
+  typeEffect();
+});
+
+// === Mobile Menu Toggle ===
 const menuToggle = document.getElementById("mobile-menu");
 const navLinks = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+if (menuToggle && navLinks) {
+  // Click event to toggle menu open/close
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    menuToggle.classList.toggle("open");
+  });
+
+  // Accessibility: allow toggle on keyboard Enter or Space keypress
+  menuToggle.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      menuToggle.click();
+    }
+  });
+}
