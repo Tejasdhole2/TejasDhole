@@ -38,20 +38,20 @@ img {
 }
 .btn {
   padding: 14px 28px;
-  background-color: #4c4cff;
+  background-color: #4c4cff; /* Bright Blue */
   color: #fff;
   border-radius: 8px;
   font-weight: 600;
   text-align: center;
   box-shadow: 0 0 10px rgba(76, 76, 255, 0.6);
-  transition: 0.3s ease, box-shadow 0.4s ease;
+  transition: background-color 0.3s ease, box-shadow 0.4s ease, transform 0.3s ease;
   display: inline-block;
   cursor: pointer;
   user-select: none;
 }
 .btn:hover,
 .btn:focus {
-  background-color: #1c1cb0;
+  background-color: #1c1cb0; /* Darker Blue */
   box-shadow: 0 0 20px #4c4cff, 0 0 40px #4c4cff;
   transform: translateY(-4px);
   outline: none;
@@ -60,7 +60,7 @@ img {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #ffc107;
+  color: #ffc107; /* Gold */
 }
 
 /* === NAVBAR === */
@@ -79,7 +79,7 @@ img {
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #ffc107;
+  color: #ffc107; /* Gold */
 }
 .nav-links {
   display: flex;
@@ -89,17 +89,17 @@ img {
   font-weight: 500;
   font-size: 1rem;
   position: relative;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 .nav-links li a::after {
   content: "";
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #ffc107;
+  background-color: #ffc107; /* Gold */
   bottom: -6px;
   left: 0;
-  transition: 0.3s;
+  transition: width 0.3s ease;
 }
 .nav-links li a:hover,
 .nav-links li a:focus,
@@ -110,28 +110,34 @@ img {
   outline: none;
 }
 .btn-cv {
-  background-color: #ffc107;
+  background-color: #ffc107; /* Gold */
   color: #0d0d1a;
   padding: 10px 18px;
   border-radius: 30px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
   cursor: pointer;
   user-select: none;
 }
 .btn-cv:hover,
 .btn-cv:focus {
-  background-color: #fff;
-  color: #111;
+  background-color: #e6b800; /* Darker Gold */
+  color: #0d0d1a;
   outline: none;
 }
 .menu-toggle {
   display: none;
+  background: #0d0d1a;
   font-size: 1.8rem;
-  color: #ffc107;
+  color: #fff; /* Sets the hamburger icon to white */
   cursor: pointer;
   user-select: none;
 }
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: #ffc107; /* Optional: gold on hover/focus for interactive effect */
+}
+
 
 /* === HERO === */
 .hero {
@@ -141,9 +147,9 @@ img {
   align-items: center;
   justify-content: center;
   min-height: 90vh;
-  background: #0b0b16;
-  background-size: 600% 600%;
-  animation: gradientBG 20s ease infinite;
+  background: linear-gradient(-45deg, #0b0b16, #141424, #0b0b16, #141424);
+  background-size: 1200% 1200%;
+  animation: gradientBG 25s ease infinite;
   padding: 4rem 1rem 1rem;
   flex-direction: column;
 }
@@ -177,7 +183,7 @@ img {
   margin-bottom: 10px;
 }
 .hero h1 span {
-  color: #ffce00;
+  color: #ffce00; /* Lighter Gold */
 }
 .subheading {
   font-size: 1.25rem;
@@ -191,7 +197,7 @@ img {
   color: #ccc;
 }
 .hero strong {
-  color: #00ffc8;
+  color: #00ffc8; /* Teal highlight */
 }
 
 /* Typewriter text */
@@ -205,6 +211,7 @@ img {
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 @keyframes typing {
   from { width: 0; }
@@ -213,6 +220,11 @@ img {
 @keyframes blink-caret {
   50% { border-color: transparent; }
   100% { border-color: #00ffd5; }
+}
+#typewriter:empty {
+  border-right: none;
+  animation: none;
+  display: none;
 }
 
 /* Entrance animation */
@@ -260,6 +272,16 @@ img {
   box-shadow: 0 24px 50px rgba(252, 206, 0, 0.6);
 }
 
+/* === SECTION DIVIDER (Between Hero and What I Do) === */
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #facc15, #2563eb);
+  border-radius: 4px;
+  box-shadow: 0 0 10px #facc15;
+}
+
+
 /* === MEDIA QUERIES === */
 @media (max-width: 992px) {
   .hero-content {
@@ -275,7 +297,6 @@ img {
     max-width: 300px;
   }
 }
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -301,7 +322,6 @@ img {
     display: none;
   }
 }
-
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 2rem;
@@ -315,14 +335,22 @@ img {
   .btn {
     width: 100%;
   }
-}
-
-.section-divider {
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #facc15, #2563eb);
-  border-radius: 4px;
-  box-shadow: 0 0 10px #facc15;
+  .container_proj {
+    padding: 50px 20px;
+    gap: 50px 20px;
+  }
+  .container_proj .card {
+    width: 260px;
+  }
+  .container_proj .card .img-box {
+    width: 210px;
+  }
+  .container_proj .card .content p {
+    font-size: 0.9rem;
+  }
+  .container_proj .card .content a {
+    font-size: 0.9rem;
+  }
 }
 
 /* === SERVICES === */
@@ -342,7 +370,7 @@ img {
 }
 .service-card i {
   font-size: 2.5rem;
-  color: #f5b301;
+  color: #ffc107; /* Gold */
   margin-bottom: 1rem;
 }
 .service-card h3 {
@@ -390,7 +418,7 @@ img {
 }
 .skills-icons div i {
   font-size: 1.2rem;
-  color: #f5b301;
+  color: #ffc107;
 }
 .skills-icons div:hover,
 .skills-icons div:focus {
@@ -446,12 +474,12 @@ img {
   background: #000000;
   border-radius: 12px;
   overflow: hidden;
-  transition: 0.5s;
+  transition: top 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
 }
 .container_proj .card:hover .img-box,
 .container_proj .card:focus .img-box {
   top: -100px;
-  scale: 0.75;
+  transform: scale(0.75);
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
 .container_proj .card .img-box img {
@@ -470,7 +498,7 @@ img {
   padding: 0 30px;
   text-align: center;
   overflow: hidden;
-  transition: 0.5s;
+  transition: top 0.5s ease, height 0.5s ease;
 }
 .container_proj .card:hover .content,
 .container_proj .card:focus .content {
@@ -495,7 +523,7 @@ img {
   color: white;
   font-weight: 500;
   border-radius: 6px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .container_proj .card .content a:hover,
 .container_proj .card .content a:focus {
@@ -557,45 +585,6 @@ form button:focus {
 }
 .footer span {
   color: #ffc107;
-}
-
-/* === MEDIA QUERIES === */
-@media (max-width: 992px) {
-  .hero-content {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .photo-card {
-    max-width: 300px;
-  }
-}
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    left: -100%;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background: #0d0d1a;
-    padding: 20px 0;
-    transition: left 0.4s ease;
-  }
-  .nav-links.active {
-    left: 0;
-  }
-  .nav-links li {
-    margin: 15px 0;
-  }
-  .btn-cv {
-    display: none;
-  }
 }
 
 /* === Mobile Toggle Icon Animation (hamburger to X) === */
