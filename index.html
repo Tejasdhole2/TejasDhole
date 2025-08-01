@@ -7,84 +7,84 @@
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-p6Gt4b38kd78n/7PQzX+a7Z7HXp7BI+Kq5KZMmkCQ+kfJsuLtvxl2ypEk59UlHjwY5VjddM8M1VkqhsoZueRLg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
-  <!-- Stylesheet -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+ <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Primary navigation">
     <div class="logo">Tejas Dhole</div>
-    <div class="menu-toggle" id="mobile-menu" aria-label="Toggle menu" role="button" tabindex="0">
-      <i class="fas fa-bars"></i>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <button class="menu-toggle" id="mobile-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation" type="button">
+  <i class="fas fa-bars" aria-hidden="true"></i>
+</button>
+
+    <ul class="nav-links" id="primary-navigation">
+      <li><a href="#hero" tabindex="0">Home</a></li>
+      <li><a href="#about" tabindex="0">About</a></li>
+      <li><a href="#projects" tabindex="0">Projects</a></li>
+      <li><a href="#contact" tabindex="0">Contact</a></li>
     </ul>
-    <a href="#" class="btn-cv" download="TejasDhole_CV.pdf" aria-label="Download CV">Download CV</a>
+    <a href="TejasDhole_CV.pdf" class="btn-cv" download aria-label="Download CV" tabindex="0">Download CV</a>
   </nav>
 
   <!-- Hero Section -->
-<header id="hero" class="hero section" role="banner">
-  <div class="container hero-content">
-    <!-- existing content here -->
-    <div class="text">
-      <h1>Hi, I’m <span>Tejas Nandkumar Dhole</span></h1>
-      <h2 class="subheading">Shaping the future of technology—crafting innovative apps, intelligent websites, and digital experiences that inspire.</h2>
-      <p>
-       Transforming ideas into powerful digital products.
-      </p>
-      <span id="typewriter" aria-live="polite" aria-atomic="true"></span>
-      <a href="#projects" class="btn" aria-label="View my work">View My Work</a>
-    </div>
-    <div class="photo" role="img" aria-label="Portrait of Tejas Dhole">
-      <div class="photo-card">
-        <img src="TejasDhole5.png" alt="Tejas Dhole" />
+  <header id="hero" class="hero section" role="banner">
+    <div class="container hero-content">
+      <div class="text">
+        <h1>Hi, I’m <span>Tejas Nandkumar Dhole</span></h1>
+        <h2 class="subheading">
+          Shaping the future of technology—crafting innovative apps, intelligent websites, and digital experiences that inspire.
+        </h2>
+        <p>Transforming ideas into powerful digital products.</p>
+        <span id="typewriter" aria-live="polite" aria-atomic="true"></span>
+        <a href="#projects" class="btn" aria-label="View my work" tabindex="0">View My Work</a>
+      </div>
+      <div class="photo" role="img" aria-label="Portrait of Tejas Dhole">
+        <div class="photo-card">
+          <img src="TejasDhole5.png" alt="Portrait of Tejas Dhole" />
+        </div>
       </div>
     </div>
-  </div>
+  </header>
 
- 
-</header>
+  <!-- Section divider line -->
+  <div class="section-divider" aria-hidden="true"></div>
 
- <!-- Section divider line -->
-  <div class="section-divider"></div>
   <!-- Services Section -->
   <section id="services" class="services section" role="region" aria-labelledby="services-title">
     <div class="container">
       <h2 id="services-title" class="section-title">What I Do</h2>
       <p class="section-subtitle">Turning ideas into real-world digital solutions</p>
       <div class="services-grid">
-        <div class="service-card" tabindex="0">
-          <i class="fas fa-laptop-code"></i>
+        <article class="service-card" tabindex="0" role="article" aria-label="Frontend Development service">
+          <i class="fas fa-laptop-code" aria-hidden="true"></i>
           <h3>Frontend Dev</h3>
           <p>HTML, CSS, JS, React</p>
-        </div>
-        <div class="service-card" tabindex="0">
-          <i class="fas fa-server"></i>
+        </article>
+
+        <article class="service-card" tabindex="0" role="article" aria-label="Backend Development service">
+          <i class="fas fa-server" aria-hidden="true"></i>
           <h3>Backend Dev</h3>
           <p>Node.js, Express APIs</p>
-        </div>
-        <div class="service-card" tabindex="0">
-          <i class="fas fa-plug"></i>
+        </article>
+
+        <article class="service-card" tabindex="0" role="article" aria-label="API Integration service">
+          <i class="fas fa-plug" aria-hidden="true"></i>
           <h3>API Integration</h3>
           <p>RESTful &amp; 3rd-Party APIs</p>
-        </div>
-        <div class="service-card" tabindex="0">
-          <i class="fas fa-paint-brush"></i>
+        </article>
+
+        <article class="service-card" tabindex="0" role="article" aria-label="UI/UX Design service">
+          <i class="fas fa-paint-brush" aria-hidden="true"></i>
           <h3>UI/UX Design</h3>
           <p>From Figma to Code</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -98,10 +98,10 @@
         currently pursuing my IT Bachelor’s degree. My skills include React, Express, MongoDB, and REST APIs.
       </p>
       <div class="skills-icons" aria-label="Technical skills">
-        <div><i class="fab fa-react" aria-hidden="true"></i> React</div>
-        <div><i class="fas fa-tools" aria-hidden="true"></i> Node/Express</div>
-        <div><i class="fas fa-database" aria-hidden="true"></i> MongoDB</div>
-        <div><i class="fas fa-mobile-alt" aria-hidden="true"></i> Responsive Design</div>
+        <div tabindex="0"><i class="fab fa-react" aria-hidden="true"></i> React</div>
+        <div tabindex="0"><i class="fas fa-tools" aria-hidden="true"></i> Node/Express</div>
+        <div tabindex="0"><i class="fas fa-database" aria-hidden="true"></i> MongoDB</div>
+        <div tabindex="0"><i class="fas fa-mobile-alt" aria-hidden="true"></i> Responsive Design</div>
       </div>
     </div>
   </section>
@@ -111,18 +111,18 @@
     <div class="container">
       <h2 id="projects-title" class="section-title">Projects</h2>
       <div class="container_proj">
-        <article class="card" style="--clr: #4c4cff" tabindex="0">
+        <article class="card" style="--clr: #4c4cff" tabindex="0" role="article" aria-label="Chat Bot project">
           <div class="img-box">
             <img src="chatbot.png" alt="Chat Bot project screenshot" />
           </div>
           <div class="content">
             <h2>Chat Bot</h2>
             <p>An interactive chatbot built using JavaScript and AI APIs to handle real-time user queries.</p>
-            <a href="https://tejasdhole2.github.io/Chatbot/" target="_blank" rel="noopener noreferrer" aria-label="Visit Chat Bot site">Visit site</a>
+            <a href="https://tejasdhole2.github.io/Chatbot/" target="_blank" rel="noopener noreferrer" aria-label="Visit Chat Bot site" tabindex="0">Visit site</a>
           </div>
         </article>
 
-        <article class="card" style="--clr: #ff6f61" tabindex="0">
+        <article class="card" style="--clr: #ff6f61" tabindex="0" role="article" aria-label="GenoCare project">
           <div class="img-box">
             <img src="GenoCare.png" alt="GenoCare project screenshot" />
           </div>
@@ -131,18 +131,18 @@
             <p>
               Developed in a team using HTML, CSS, JavaScript, and PHP/MySQL. Features include dynamic Medicals search near you, secure appointment booking, and real-time contact support.
             </p>
-            <a href="#" aria-label="Visit GenoCare site">Visit Site</a>
+            <a href="#" aria-label="Visit GenoCare site" tabindex="0">Visit Site</a>
           </div>
         </article>
 
-        <article class="card" style="--clr: #1abc9c" tabindex="0">
+        <article class="card" style="--clr: #1abc9c" tabindex="0" role="article" aria-label="Ocean web project">
           <div class="img-box">
             <img src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=872&q=80" alt="Ocean web project screenshot" />
           </div>
           <div class="content">
             <h2>Ocean</h2>
             <p>Building fluid interfaces and backend services that scale as your users grow.</p>
-            <a href="#" aria-label="Read more about Ocean project">Read More</a>
+            <a href="#" aria-label="Read more about Ocean project" tabindex="0">Read More</a>
           </div>
         </article>
       </div>
@@ -154,10 +154,10 @@
     <div class="container">
       <h2 id="contact-title" class="section-title">Contact Me</h2>
       <form action="#" method="POST" aria-label="Contact form">
-        <input type="text" name="name" placeholder="Your Name" required aria-required="true" />
-        <input type="email" name="email" placeholder="Your Email" required aria-required="true" />
-        <textarea name="message" rows="4" placeholder="Your Message" required aria-required="true"></textarea>
-        <button type="submit" aria-label="Send message">Send Message</button>
+        <input type="text" name="name" placeholder="Your Name" required aria-required="true" tabindex="0" />
+        <input type="email" name="email" placeholder="Your Email" required aria-required="true" tabindex="0" />
+        <textarea name="message" rows="4" placeholder="Your Message" required aria-required="true" tabindex="0"></textarea>
+        <button type="submit" aria-label="Send message" tabindex="0">Send Message</button>
       </form>
     </div>
   </section>
@@ -168,6 +168,6 @@
   </footer>
 
   <!-- Script -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
